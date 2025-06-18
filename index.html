@@ -87,6 +87,16 @@
                                 "height",
                                 document.body.clientHeight,
                             );
+
+                            console.log(
+                                "Video stream size is ",
+                                s.width,
+                                s.height,
+                                "adjusting video size to be:",
+                                (s.width * document.body.clientHeight) /
+                                    s.height,
+                                document.body.clientHeight,
+                            );
                         }
                     })
                     .catch(function (err0r) {
