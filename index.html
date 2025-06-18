@@ -45,6 +45,11 @@
 
         <script>
             var video = document.getElementById("video");
+            console.log(
+                "Screen size:",
+                document.body.clientWidth,
+                document.body.clientHeight,
+            );
 
             var constraints = {
                 video: {
@@ -59,7 +64,7 @@
                     .getUserMedia(constraints)
                     .then(function (stream) {
                         video.srcObject = stream;
-                        var tracks = stream.getTracks();
+                        console.log("Connected media stream!");
                     })
                     .catch(function (err0r) {
                         console.log("Something went wrong!");
